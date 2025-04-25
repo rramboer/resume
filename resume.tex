@@ -1,0 +1,218 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Huge \scshape Nicholas (Cole) VanOphem} & \href{mailto:nvano@umich.edu}{nvano@umich.edu}\\
+  \href{https://colevanophem.github.io/}{colevanophem.github.io} & \href{tel:+12482960919}{(248)296-0919} \\
+  \href{https://github.com/ColeVanOphem}{github.com/ColeVanOphem} & \href{https://www.linkedin.com/in/cole-vanophem/}{linkedin.com/in/cole-vanophem/} \\
+  
+\end{tabular*}
+
+% \begin{center}
+%     \textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
+%     \small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
+%     \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
+%     \href{https://github.com/...}{\underline{github.com/jake}}
+% \end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Michigan}{Ann Arbor, MI}
+      {Bachelor of Science in Computer Science, Minor in Mathematics}{Aug 2022 -- May 2026}
+      \resumeItemListStart
+        \resumeItem{\textbf{Awards:} University Honors, LSA Alumni Scholarship $|$ \textbf{Leadership:} Michigan Hackers (Team Lead)}
+        \resumeItem{\textbf{Coursework:} Data Structures \& Algorithms, Operating Systems, Distributed Systems, Web Systems, Computer Networks, Computer Organization, Machine Learning, Software Engineering, Theory of Computer Science, Linear Algebra, Discrete Mathematics, Combinatorics, Abstract Algebra}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer Intern}{Jun 2024 -- Aug 2024}
+      {OneStream Software}{Birmingham, MI}
+      \resumeItemListStart
+        \resumeItem{Architected and implemented scalable, high-throughput client notification service leveraging C\#/.NET and Azure Functions, handling up to 1M+ daily messages, resulting in 75\% fewer bounces and improved client engagement}
+        \resumeItem{Optimized scalability and throughput of messaging infrastructure by reducing message payload size by 90\% via a claim-check pattern implemented with Azure Service Bus and Storage Blobs, enabling large message attachments}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Software Engineer Intern}{May 2023 -- Aug 2023}
+      {United Wholesale Mortgage}{Pontiac, MI}
+      \resumeItemListStart
+        \resumeItem{Collaborated with VP of Architecture to develop C\#/.NET microservice identifying code changes causing downtime in critical loan origination systems, improving reliability for platform processing 20\% of all U.S. mortgages}
+        \resumeItem{Created new system to aggregate and store up to 1.5M Jira fields per day utilizing an ASP.NET Core microservice in C\#/.NET and SQL Server and Entity Framework for data storage, deployed to Azure using Docker and Orkes}
+        \resumeItem{Embedded with cross-functional agile scrum team to develop and test backend enhancements and optimizations for a monolith and microservices platform processing \$93B+ in annual loan origination}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Structures \& Algorithms Team Lead}{May 2023 -- Present}
+      {Michigan Hackers}{Ann Arbor, MI}
+      \resumeItemListStart
+        \resumeItem{Facilitated weekly tutoring sessions covering foundational Data Structures and Algorithms concepts in C++, mentoring groups of 10+ undergraduate students at Michigan Hackers club events}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{EECSchange} $|$ \emph{C++20, Golang, gRPC, PostgreSQL, Docker, Git}}{}
+          \resumeItemListStart
+            \resumeItem{Engineering a stock exchange using multithreaded C++, featuring high-performance order matching engine and real-time data transfer, simulating the real-world trading experience}
+            \resumeItem{Developing a React and TypeScript app to enable trading on the exchange and visualize the life cycle of a trade}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Distributed Key-Value Store} $|$ \emph{Golang, gRPC, Git}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented Paxos protocol to achieve distributed consensus and built optimized, linearizable, fault-tolerant replicated state machine minimizing network overhead, featuring real-time garbage collection}
+            \resumeItem{Integrated sharding layer for horizontal scaling across thousands of concurrent operations, leveraging central shardmaster for load balancing. Used Golang for performant execution and gRPC for low-latency requests}
+          \resumeItemListEnd
+      \resumeProjectHeading
+        {\textbf{User-Level C++ Thread Library} $|$ \emph{C++17, CMake, Linux, Git}}{}
+        \resumeItemListStart
+          \resumeItem{Built a user-level C++17 library on Unix, handling thread management on multiple CPUs, interrupts, atomicity, and FIFO scheduling order with mutexes, condition variables, and spin-locks using Unix context management}
+        \resumeItemListEnd
+      \resumeProjectHeading
+        {\textbf{Stock Portfolio Optimization Web Dashboard} $|$ \emph{Python, Flask, React, JavaScript}}{}
+        \resumeItemListStart
+          \resumeItem{Developed a portfolio optimization web app with a dashboard that allowing users to create optimal, data-driven portfolios given initial stock holdings and uninvested cash. Runner-up for Best Financial Hack at MHacks 16}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C++, C\#, Golang, HTML/CSS, JavaScript, Python,  SQL} \\
+     \textbf{Frameworks}{: .NET Core, Flask, React, SQLite, Tailwind} \\
+     \textbf{Developer Tools}{: Agile, AWS, Azure, Docker, GCP, Git, Jira, Linux, Postman, Scrum} \\
+     \textbf{Interests}{: Weightlifting, Urban Planning, Formula 1, College Football}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
