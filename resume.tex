@@ -1,10 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -20,17 +13,31 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-
 %----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
 
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
+% --- Sans-Serif Options ---
+% \usepackage[sfdefault]{FiraSans}     % Fira Sans
+% \usepackage[sfdefault]{roboto}        % Roboto
+% \usepackage[sfdefault]{noto-sans}    % Noto Sans
+% \usepackage[default]{sourcesanspro}   % Source Sans Pro
+% \usepackage{helvet}                   % Helvetica
+% \renewcommand{\familydefault}{\sfdefault} % Use Helvetica as default sans-serif
+% \usepackage{avant}                    % Avant Garde
+% \renewcommand{\familydefault}{\sfdefault} % Use Avant Garde as default sans-serif
+
+% --- Serif Options ---
+% \usepackage{times}                    % Times New Roman-like
+% \usepackage{newtxtext}, \usepackage{newtxmath} % NewTX Roman (modern Times replacement)
+% \usepackage{charter}                  % Charter
+% \usepackage{mathptmx}                 % Times-like with Math
+% \usepackage{CormorantGaramond}       % Cormorant Garamond (elegant)
+% \usepackage{ebgaramond}               % EB Garamond (excellent alternative)
+
+% --- Monospace Options ---
+% \usepackage{courier}                  % Courier-like
+% \usepackage{newtxtt}                  % NewTX Typewriter (modern Courier replacement)
+% \usepackage{consolas}                 % Consolas (requires system availability)
+% \usepackage{inconsolata}              % Inconsolata
 
 
 \pagestyle{fancy}
@@ -39,11 +46,14 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
+% Set bullet point margin
+\setlist[itemize]{leftmargin=0.27in}
+
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
+\addtolength{\topmargin}{-0.6in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -54,8 +64,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -84,7 +94,7 @@
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
+    \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
@@ -94,7 +104,7 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -107,17 +117,17 @@
 
 %----------HEADING----------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Huge \scshape Nicholas (Cole) VanOphem} & \href{mailto:nvano@umich.edu}{nvano@umich.edu}\\
-  \href{https://colevanophem.github.io/}{colevanophem.github.io} & \href{tel:+12482960919}{(248)296-0919} \\
-  \href{https://github.com/ColeVanOphem}{github.com/ColeVanOphem} & \href{https://www.linkedin.com/in/cole-vanophem/}{linkedin.com/in/cole-vanophem/} \\
-  
+  \textbf{\Huge \scshape Ryan Ramboer} & \href{mailto:ryanramboer@gmail.com}{ryanramboer@gmail.com}\\
+  \href{https://rramboer.github.io/}{rramboer.github.io} & \href{tel:+12488801513}{(248) 880-1513} \\
+  \href{https://github.com/rramboer}{github.com/rramboer} & \href{https://www.linkedin.com/in/ryan-ramboer}{linkedin.com/in/ryan-ramboer} \\
 \end{tabular*}
 
 % \begin{center}
-%     \textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
-%     \small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
-%     \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
-%     \href{https://github.com/...}{\underline{github.com/jake}}
+%     \textbf{\Huge \scshape Ryan Ramboer} \\ \vspace{1pt}
+%     \small (248) 880-1513 $|$ \href{mailto:ryanramboer@gmail.com}{\underline{ryanramboer@gmail.com}} $|$ 
+%     \href{https://linkedin.com/in/ryan-ramboer}{\underline{linkedin.com/in/ryan-ramboer}} $|$
+%     \href{https://github.com/rramboer}{\underline{github.com/rramboer}} $|$
+%     \href{https://rramboer.github.io}{\underline{rramboer.github.io}}
 % \end{center}
 
 
@@ -125,11 +135,12 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of Michigan}{Ann Arbor, MI}
-      {Bachelor of Science in Computer Science, Minor in Mathematics}{Aug 2022 -- May 2026}
+      {University of Michigan}{Aug 2020 -- Dec 2023}
+      {Bachelor of Science in Engineering, Computer Science (3.9 GPA)}{Ann Arbor, MI}
       \resumeItemListStart
-        \resumeItem{\textbf{Awards:} University Honors, LSA Alumni Scholarship $|$ \textbf{Leadership:} Michigan Hackers (Team Lead)}
-        \resumeItem{\textbf{Coursework:} Data Structures \& Algorithms, Operating Systems, Distributed Systems, Web Systems, Computer Networks, Computer Organization, Machine Learning, Software Engineering, Theory of Computer Science, Linear Algebra, Discrete Mathematics, Combinatorics, Abstract Algebra}
+        \resumeItem{\textbf{Awards:} Summa Cum Laude, James B. Angell Scholar, Dean’s List, University Honors, Regents Scholar}
+        \resumeItem{\textbf{Coursework:} Data Structures and Algorithms, Computer Science Theory, Discrete Math, Software Engineering, Computer Organization, Intro to Artificial Intelligence, Computer Security, UX/UI Design, Multivariable Calculus}
+        \resumeItem{\textbf{Activities:} Theta Capital (VP), DIII Ice Hockey (2023 National Champion), Michigan Journal of Econ. (Editor)}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -139,38 +150,47 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Software Engineer Intern}{Jun 2024 -- Aug 2024}
-      {OneStream Software}{Birmingham, MI}
+      {Software Engineer}{Mar 2024 -- Present}
+      {FactSet}{Remote, USA}
       \resumeItemListStart
-        \resumeItem{Architected and implemented scalable, high-throughput client notification service leveraging C\#/.NET and Azure Functions, handling up to 1M+ daily messages, resulting in 75\% fewer bounces and improved client engagement}
-        \resumeItem{Optimized scalability and throughput of messaging infrastructure by reducing message payload size by 90\% via a claim-check pattern implemented with Azure Service Bus and Storage Blobs, enabling large message attachments}
+        \resumeItem{Spearheaded development of next-generation web platform (Vue, TypeScript) seamlessly integrating FactSet AI assistant into completely reimagined and redesigned UX workflow to optimize performance, efficiency, and usability}
+        \resumeItem{Engineered new financial research workflow features for redesigned iOS and Android app, enabling 20,000+ users to access millions of pieces of proprietary data on the go; Completed as part of CEO-led, handpicked mobile task force}
+        \resumeItem{Maintained and upgraded web platform infrastructure vital to platform functionality for over 140,000 daily users}
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
+   % \resumeSubSubheading
+   %  {Software Engineer I}{Oct 2014 - Sep 2016}
+   %  \resumeItemListStart
+   %     \resumeItem{Apache Beam}
+   %       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+   %  \resumeItemListEnd
+   % \resumeSubHeadingListEnd
 %-------------------------------------------
 
     \resumeSubheading
       {Software Engineer Intern}{May 2023 -- Aug 2023}
-      {United Wholesale Mortgage}{Pontiac, MI}
+      {FactSet}{Norwalk, CT}
       \resumeItemListStart
-        \resumeItem{Collaborated with VP of Architecture to develop C\#/.NET microservice identifying code changes causing downtime in critical loan origination systems, improving reliability for platform processing 20\% of all U.S. mortgages}
-        \resumeItem{Created new system to aggregate and store up to 1.5M Jira fields per day utilizing an ASP.NET Core microservice in C\#/.NET and SQL Server and Entity Framework for data storage, deployed to Azure using Docker and Orkes}
-        \resumeItem{Embedded with cross-functional agile scrum team to develop and test backend enhancements and optimizations for a monolith and microservices platform processing \$93B+ in annual loan origination}
+        \resumeItem{Architected and developed 3 API endpoints in C++ for each of the 4 in-house portfolio optimization applications}
+        \resumeItem{Constructed Jupyter Notebooks to showcase API functionality and automation use-cases to buy-side quant clients}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Data Structures \& Algorithms Team Lead}{May 2023 -- Present}
-      {Michigan Hackers}{Ann Arbor, MI}
+      {Webmaster}{Jan 2022 -- Sep 2022}
+      {UMich Engineering Career Fair}{Ann Arbor, MI}
       \resumeItemListStart
-        \resumeItem{Facilitated weekly tutoring sessions covering foundational Data Structures and Algorithms concepts in C++, mentoring groups of 10+ undergraduate students at Michigan Hackers club events}
-    \resumeItemListEnd
+        \resumeItem{Reconstructed and maintained the official website for the UMich Engineering Career Fair, which was viewed more than 26,000 times and brought in \$263,100 in revenue from 260+ companies}
+        \resumeItem{Organized 5,000+ students and 400+ corporate recruiters during the two-day event, ensuring maximal efficiency}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Verification Engineer Intern}{May 2022 -- Aug 2022}
+      {Gentherm}{Northville, MI}
+      \resumeItemListStart
+        \resumeItem{Developed rigorous test suite to validate internal test automation tools, increasing testing efficiency by 80\%}
+        \resumeItem{Created and executed 200+ software and systems test cases on ECUs for customer products using simulation tools}
+        \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
@@ -178,41 +198,46 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+    
       \resumeProjectHeading
-          {\textbf{EECSchange} $|$ \emph{C++20, Golang, gRPC, PostgreSQL, Docker, Git}}{}
+          {\href{https://github.com/rramboer/MichMoney}{\textbf{Forex Visualizer \& Sentiment Heatmap Analyzer}} $|$ \emph{Python, Flask, React, Tailwind, Git}}{}
           \resumeItemListStart
-            \resumeItem{Engineering a stock exchange using multithreaded C++, featuring high-performance order matching engine and real-time data transfer, simulating the real-world trading experience}
-            \resumeItem{Developing a React and TypeScript app to enable trading on the exchange and visualize the life cycle of a trade}
+            \resumeItem{Created a fintech web app featuring real-time global FX visualizer and earnings call transcript analyzer using NLP to generate market-wide heatmap of company sentiment, colored by sentiment of each company's last earnings call}
+            \resumeItem{Won Best FinTech Hack for Best Use of Digital Currency out of 486 participants at SpartaHack 9 hackathon}
           \resumeItemListEnd
+      
       \resumeProjectHeading
-          {\textbf{Distributed Key-Value Store} $|$ \emph{Golang, gRPC, Git}}{}
-          \resumeItemListStart
-            \resumeItem{Implemented Paxos protocol to achieve distributed consensus and built optimized, linearizable, fault-tolerant replicated state machine minimizing network overhead, featuring real-time garbage collection}
-            \resumeItem{Integrated sharding layer for horizontal scaling across thousands of concurrent operations, leveraging central shardmaster for load balancing. Used Golang for performant execution and gRPC for low-latency requests}
-          \resumeItemListEnd
-      \resumeProjectHeading
-        {\textbf{User-Level C++ Thread Library} $|$ \emph{C++17, CMake, Linux, Git}}{}
+        {\href{https://github.com/rramboer/WolvWealth}{\textbf{Stock Portfolio Optimization Web Dashboard}} $|$ \emph{Python, Flask, React, SQL, Google Cloud}}{}
         \resumeItemListStart
-          \resumeItem{Built a user-level C++17 library on Unix, handling thread management on multiple CPUs, interrupts, atomicity, and FIFO scheduling order with mutexes, condition variables, and spin-locks using Unix context management}
+          \resumeItem{Developed a portfolio optimization web app with a dashboard that allows users to create optimal, data-driven portfolios given initial stock holdings and uninvested cash, featuring backtesting capabilities}
+          \resumeItem{Runner-up for Best Financial Hack out of 357 participants at MHacks 16 hackathon}
         \resumeItemListEnd
+
       \resumeProjectHeading
-        {\textbf{Stock Portfolio Optimization Web Dashboard} $|$ \emph{Python, Flask, React, JavaScript}}{}
+        {\href{https://github.com/rramboer/MHACKS-14-fastrfood}{\textbf{Campus Dining Hall Time-Optimized GPS}} $|$ \emph{HTML, CSS, JavaScript, Firebase}}{}
         \resumeItemListStart
-          \resumeItem{Developed a portfolio optimization web app with a dashboard that allowing users to create optimal, data-driven portfolios given initial stock holdings and uninvested cash. Runner-up for Best Financial Hack at MHacks 16}
+          \resumeItem{Directed users to UMich campus dining hall with shortest meal acquisition time using crowdsourced line-length data and Google Maps API to calculate total wait time based on the user's initial location}
+          \resumeItem{Won Best Beginner Hack and Best Use of Google Cloud out of 164 participants at MHacks 14 hackathon}
         \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\href{https://github.com/rramboer/stock-simulator}{\textbf{Price Action Simulator}} $|$ \emph{Python}}{}
+        \resumeItemListStart
+          \resumeItem{Developed a parametrizable Monte Carlo simulation to model rally and crash price action, incorporating complex systems dynamics and investor psychology including panic and FOMO}
+        \resumeItemListEnd
+        
     \resumeSubHeadingListEnd
-%
-%-----------PROGRAMMING SKILLS-----------
+
+%-----------SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+ \begin{itemize}[leftmargin=0.1in, label={}]
     \small{\item{
-     \textbf{Languages}{: C++, C\#, Golang, HTML/CSS, JavaScript, Python,  SQL} \\
-     \textbf{Frameworks}{: .NET Core, Flask, React, SQLite, Tailwind} \\
-     \textbf{Developer Tools}{: Agile, AWS, Azure, Docker, GCP, Git, Jira, Linux, Postman, Scrum} \\
-     \textbf{Interests}{: Weightlifting, Urban Planning, Formula 1, College Football}
+     \textbf{Languages}{: C++, C, Python, HTML, CSS, JavaScript, TypeScript, Bash, SQL} \\
+     \textbf{Frameworks}{: Vue, React, Node, Flask, SQLite, Bootstrap, Tailwind, Vite} \\
+     \textbf{Developer Tools}{: Agile, AWS, CI/CD, Docker, Git, Jira, Linux, MS Excel, Postman, Raspberry Pi, REST API, VSCode} \\
+     \textbf{Interests}{: Hockey, Tennis, Piano, Hiking, PC Building, Financial Market Analysis (Bloomberg Market Concepts Cert.)}
     }}
  \end{itemize}
-
 
 %-------------------------------------------
 \end{document}
