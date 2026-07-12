@@ -11,7 +11,13 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+
+% pdfTeX-only: ATS-friendly text extraction (no-op under XeTeX/Tectonic,
+% whose PDFs are already Unicode-aware)
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
 
 %----------FONT OPTIONS----------
 
@@ -67,8 +73,7 @@
   \vspace{-10pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+% (ATS/machine-readable setup handled in the guarded block near the top)
 
 %-------------------------
 % Custom commands
@@ -139,7 +144,6 @@
       {Bachelor of Science in Engineering, Computer Science (3.9 GPA)}{Ann Arbor, MI}
       \resumeItemListStart
         \resumeItem{\textbf{Awards:} Summa Cum Laude, James B. Angell Scholar, Dean’s List, University Honors, Regents Scholar}
-        \resumeItem{\textbf{Coursework:} Data Structures and Algorithms, Computer Science Theory, Discrete Math, Software Engineering, Computer Organization, Intro to Artificial Intelligence, Computer Security, UX/UI Design, Multivariable Calculus}
         \resumeItem{\textbf{Activities:} Theta Capital (VP), DIII Ice Hockey (2023 National Champion), Michigan Journal of Econ. (Editor)}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -150,48 +154,49 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Software Engineer}{Mar 2024 -- Present}
       {FactSet}{Remote, USA}
+      {Software Engineer III}{Sep 2026 -- Present}
       \resumeItemListStart
-        \resumeItem{Spearheaded development of next-gen web platform (Vue, TypeScript) seamlessly integrating FactSet AI assistant into completely redesigned UX workflow to optimize performance, efficiency, and usability for 150,000+ daily active users}
-        \resumeItem{Engineered new financial research workflow features for redesigned iOS and Android app, enabling 50,000+ users to access millions of pieces of proprietary data on the go; Completed as part of CEO-led, handpicked mobile task force}
-        \resumeItem{Maintained and upgraded web platform infrastructure vital to platform functionality for over 150,000 daily users}
-        \resumeItem{Nominated for Dealmakers \& Wealth Trailblazer Award for exemplifying exceptional dedication, delivering outstanding results, and demonstrating leadership}
+        \resumeItem{Leading development of a new full-stack agentic platform in FactSet's newly formed AI business unit --- enabling clients to build custom AI agents, or deploy FactSet-defined ones, and run them directly on FactSet's proprietary financial data}
+        \resumeItem{Designed and implemented the platform's core capabilities: an MCP-enabled architecture with agent orchestration, agentic workflows, scheduled routines, and a run-results dashboard}
       \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-   % \resumeSubSubheading
-   %  {Software Engineer I}{Oct 2014 - Sep 2016}
-   %  \resumeItemListStart
-   %     \resumeItem{Apache Beam}
-   %       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-   %  \resumeItemListEnd
-   % \resumeSubHeadingListEnd
-%-------------------------------------------
+
+    \resumeSubSubheading
+      {Software Engineer II}{Sep 2025 -- Sep 2026}
+      \resumeItemListStart
+        \resumeItem{Drove the ground-up rewrite of FactSet's flagship web platform (Vue, TypeScript), embedding the FactSet AI assistant into a reimagined workflow --- launched to 150,000+ daily users with 99\%+ client satisfaction}
+        \resumeItem{Selected by leadership as one of 6 business-unit-wide nominees for the Dealmakers \& Wealth Trailblazer Award}
+      \resumeItemListEnd
+
+    \resumeSubSubheading
+      {Software Engineer I}{Mar 2024 -- Sep 2025}
+      \resumeItemListStart
+        \resumeItem{Handpicked for the CEO-led task force that rebuilt FactSet's iOS and Android apps --- owned the Markets tab (data and charting across all asset classes), built as shared Vue/TypeScript webviews in native Swift and Kotlin shells; shipped to 50,000+ users}
+        \resumeItem{Maintained and upgraded core web platform infrastructure through nearly 2x user growth, optimizing for millisecond-level performance and workflow efficiency across 150,000+ daily users}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Agentic Coding Subject Matter Expert \& Project Lead}{May 2024 -- Present}
+      {Alignerr (Freelance)}{Remote, USA}
+      \resumeItemListStart
+        \resumeItem{Lead agentic coding projects across freelance AI training-data platforms, producing high-quality human data for training and evaluating frontier LLMs}
+        \resumeItem{Partner with frontier AI labs to design projects targeting observed model failure modes; research QA methods (rubric design, gold-standard calibration, inter-annotator agreement) ensuring label quality and instruction adherence}
+      \resumeItemListEnd
 
     \resumeSubheading
       {Software Engineer Intern}{May 2023 -- Aug 2023}
       {FactSet}{Norwalk, CT}
       \resumeItemListStart
-        \resumeItem{Architected and developed 3 API endpoints in C++ for each of the 4 in-house portfolio optimization applications}
-        \resumeItem{Constructed Jupyter Notebooks to showcase API functionality and automation use-cases to buy-side quant clients}
+        \resumeItem{Architected and developed 12 C++ REST API endpoints --- 3 for each of FactSet's 4 in-house and vendor portfolio optimization engines --- enabling buy-side quant clients to build optimal portfolios entirely programmatically}
       \resumeItemListEnd
-
-    \resumeSubheading
-      {Webmaster}{Jan 2022 -- Sep 2022}
-      {UMich Engineering Career Fair}{Ann Arbor, MI}
-      \resumeItemListStart
-        \resumeItem{Reconstructed and maintained the official website for the UMich Engineering Career Fair, which was viewed more than 26,000 times and brought in \$263,100 in revenue from 260+ companies}
-        \resumeItem{Organized 5,000+ students and 400+ corporate recruiters during the two-day event, ensuring maximal efficiency}
-        \resumeItemListEnd
 
     \resumeSubheading
       {Software Verification Engineer Intern}{May 2022 -- Aug 2022}
       {Gentherm}{Northville, MI}
       \resumeItemListStart
-        \resumeItem{Developed rigorous test suite to validate internal test automation tools, increasing testing efficiency by 80\%}
-        \resumeItem{Created and executed 200+ software and systems test cases on ECUs for customer products using simulation tools}
-        \resumeItemListEnd
+        \resumeItem{Developed a 3,400-line Vector CAPL test suite to validate internal test automation tools for automotive hardware, increasing testing efficiency by 80\%}
+        \resumeItem{Created and executed 200+ software/systems test cases on physical ECUs using Vector CANalyzer CAN bus simulation}
+      \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
@@ -203,23 +208,21 @@
       \resumeProjectHeading
           {\href{https://github.com/rramboer/MichMoney}{\textbf{Forex Visualizer \& Sentiment Heatmap Analyzer}} $|$ \emph{Python, Flask, React, Tailwind, Git}}{}
           \resumeItemListStart
-            \resumeItem{Created a fintech web app featuring real-time global FX visualizer and earnings call transcript analyzer using NLP to generate market-wide heatmap of company sentiment, colored by sentiment of each company's last earnings call}
-            \resumeItem{Won Best FinTech Hack for Best Use of Digital Currency out of 486 participants at SpartaHack 9 hackathon}
+            \resumeItem{Real-time global FX visualizer and NLP-driven earnings-call sentiment heatmap --- won Best FinTech Hack out of 486 participants at SpartaHack 9}
           \resumeItemListEnd
       
       \resumeProjectHeading
         {\href{https://github.com/rramboer/WolvWealth}{\textbf{Stock Portfolio Optimization Web Dashboard}} $|$ \emph{Python, Flask, React, SQL, Google Cloud}}{}
         \resumeItemListStart
-          \resumeItem{Developed a portfolio optimization web app with a dashboard that allows users to create optimal, data-driven portfolios given initial stock holdings and uninvested cash, featuring backtesting capabilities}
-          \resumeItem{Runner-up for Best Financial Hack out of 357 participants at MHacks 16 hackathon}
+          \resumeItem{Portfolio-optimization dashboard building optimal, data-driven portfolios from holdings and cash, with backtesting --- runner-up for Best Financial Hack out of 357 participants at MHacks 16}
         \resumeItemListEnd
 
-      \resumeProjectHeading
-        {\href{https://github.com/rramboer/MHACKS-14-fastrfood}{\textbf{Campus Dining Hall Time-Optimized GPS}} $|$ \emph{HTML, CSS, JavaScript, Firebase}}{}
-        \resumeItemListStart
-          \resumeItem{Directed users to UMich campus dining hall with shortest meal acquisition time using crowdsourced line-length data and Google Maps API to calculate total wait time based on the user's initial location}
-          \resumeItem{Won Best Beginner Hack and Best Use of Google Cloud out of 164 participants at MHacks 14 hackathon}
-        \resumeItemListEnd
+      % \resumeProjectHeading
+      %   {\href{https://github.com/rramboer/MHACKS-14-fastrfood}{\textbf{Campus Dining Hall Time-Optimized GPS}} $|$ \emph{HTML, CSS, JavaScript, Firebase}}{}
+      %   \resumeItemListStart
+      %     \resumeItem{Directed users to UMich campus dining hall with shortest meal acquisition time using crowdsourced line-length data and Google Maps API to calculate total wait time based on the user's initial location}
+      %     \resumeItem{Won Best Beginner Hack and Best Use of Google Cloud out of 164 participants at MHacks 14 hackathon}
+      %   \resumeItemListEnd
 
       % \resumeProjectHeading
       %   {\href{https://github.com/rramboer/stock-simulator}{\textbf{Price Action Simulator}} $|$ \emph{Python}}{}
@@ -235,8 +238,7 @@
     \small{\item{
      \textbf{Languages}{: C++, C, Python, HTML, CSS, SCSS, JavaScript, TypeScript, Bash, SQL} \\
      \textbf{Frameworks}{: Vue, React, Node, Flask, SQLite, Bootstrap, Tailwind, Vite, Vitest} \\
-     \textbf{Developer Tools}{: Agile, AWS, CI/CD, Docker, Git, Jira, Linux, MS Excel, Postman, Raspberry Pi, REST API, VSCode} \\
-     \textbf{Interests}{: Hockey, Tennis, Piano, Hiking, PC Building, Financial Market Analysis (Bloomberg Market Concepts Cert.)}
+     \textbf{Developer Tools}{: Agile, AWS, CI/CD, Claude Code, Docker, Git, Jira, Linux, MCP, Postman, Raspberry Pi, REST API, VSCode}
     }}
  \end{itemize}
 
