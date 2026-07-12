@@ -1,0 +1,10 @@
+# LaTeX build artifacts (RyanRamboerResume.pdf is tracked deliberately —
+# it's the file GitHub Pages serves via index.html)
+resume.pdf
+*.synctex.gz
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.xdv

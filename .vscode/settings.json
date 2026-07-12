@@ -1,0 +1,26 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "tectonic",
+            "tools": [
+                "tectonic"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "tectonic",
+            "command": "/home/ryan/.local/bin/tectonic",
+            "args": [
+                "--synctex",
+                "%DOC%.tex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "tectonic",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "[latex]": {
+        "editor.formatOnSave": false
+    }
+}
